@@ -21,5 +21,6 @@ from userprofiles import views as userprofiles_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tracks/(?P<title>[\w\-]+)/', tracks_views.track_view, name='track_view'),
-    url(r'^signup/', userprofiles_views.signup, name='signup')
+    url(r'^signup/', userprofiles_views.signup, name='signup'),
+    url(r'^signin/', userprofiles_views.signin, name='signin')
 ]
