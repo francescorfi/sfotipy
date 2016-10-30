@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from tracks import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^tracks/(?P<title>\w+)/', views.track_view, name='track_view')
 ]
