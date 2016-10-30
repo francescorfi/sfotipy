@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     #own apps
     'tracks',
     'albums',
-    'artists'
+    'artists',
+    'userprofiles'
 ]
 
 MIDDLEWARE = [

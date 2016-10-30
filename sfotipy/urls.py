@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from tracks import views
+from tracks import views as tracks_views
+from userprofiles import views as userprofiles_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^tracks/(?P<title>\w+)/', views.track_view, name='track_view')
+    url(r'^tracks/(?P<title>[\w\-]+)/', tracks_views.track_view, name='track_view'),
+    url(r'^signup/', userprofiles_views.signup, name='signup')
 ]
